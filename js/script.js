@@ -22,9 +22,23 @@ function generaNumeri(){
         }
     }
 
-    
-
     return numberArray;
 }
 
+console.log(generaNumeri())
 
+
+function convertStringToNumberArray(numberstring){
+    let userNumber = [];
+
+    for(let i = 0; i < numberstring.length; i++){
+
+        userNumber.push(parseInt(numberstring[i]));
+    }
+    
+    return userNumber
+}
+
+let userDomNumber = document.querySelector('.input').value
+
+console.log(convertStringToNumberArray(userDomNumber))
