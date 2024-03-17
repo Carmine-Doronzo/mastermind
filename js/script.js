@@ -56,26 +56,43 @@ Verificare se i singoli valori sono presenti nell'array dei numeri generati dal 
 
 const submitDomElement = document.querySelector('.submit');
 
+let divDomElement = document.querySelector('.mastermind')
+
 submitDomElement.addEventListener('click',function(){
+
+    divDomElement.innerHTML = '';
 
     let userDomNumber = document.querySelector('.input').value;
     
     userDomNumber = convertStringToNumberArray(userDomNumber);
 
+    
+
     console.log(userDomNumber)
 
     for(let i = 0; i < userDomNumber.length; i++){
         const presentIndex = pcNumber.indexOf(userDomNumber[i])
+        
         if(presentIndex !== -1){
-        if(presentIndex === i){
-            console.log('x')
-        }else{
-            console.log('O')
-        }
-        }
+            if(presentIndex === i){
+
+                divDomElement.innerHTML +=`x`
+                console.log('x')
+                
+            }else{
+                divDomElement.innerHTML +=`O`
+                console.log('O')
+            }
+        }   
+       
     }
 
-    
+   
 
 })
+
+/**Milestone 4
+Rispondere con una stringa composta da O e X dove O corrisponde ad un numero giusto al posto sbagliato e X corrisponde al numero giusto al posto giusto */
+
+
 
