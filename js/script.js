@@ -72,20 +72,29 @@ submitDomElement.addEventListener('click',function(){
 
     for(let i = 0; i < userDomNumber.length; i++){
         const presentIndex = pcNumber.indexOf(userDomNumber[i])
+          
         
         if(presentIndex !== -1){
             if(presentIndex === i){
 
                 divDomElement.innerHTML +=`x`
                 console.log('x')
-                
+                console.log(divDomElement.innerHTML)
+               
             }else{
                 divDomElement.innerHTML +=`O`
                 console.log('O')
+                console.log(divDomElement.innerHTML)
             }
-        }   
+        } 
+        if(divDomElement.innerHTML === `xxxx`){
+            divDomElement.innerHTML = `hai vinto`
+
+        }
        
     }
+
+    
 
    
 
